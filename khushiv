@@ -1,0 +1,159 @@
+#include<iostream>
+#include<cstdlib>
+#include<cmath>
+using namespace std;
+
+void addition();
+void subtraction();
+void multiplication();
+void division();
+void factorial();
+void square();
+void power();
+void cube();
+void squareroot();
+
+int main(){
+    cout<<"Welcome to the scientific calculator, developed by KAJAL DHIMAN!! "<<endl;
+    cout <<"*Press 0 to quit the program**\n"<<endl;
+    cout <<"Enter 1 for Addition\n";
+    cout <<"Enter 2 for Subtraction\n";
+    cout <<"Enter 3 for Multiplication\n";
+    cout <<"Enter 4 for Division\n";
+    cout <<"Enter 5 for Factorial\n";
+    cout <<"Enter 6 for Square\n";
+    cout <<"Enter 7 for Power\n";
+    cout <<"Enter 8 for Cube\n";
+    cout <<"Enter 9 for Squareroot\n";
+     int choice;
+    while(1){
+        cout<<"enter your choice:";
+    cin>>choice;
+   
+    switch(choice)
+    {
+        case 1:
+        addition();
+         break;
+         case 2:
+        subtraction();
+        break;
+         case 3:
+         multiplication();
+         break;
+          case 4:
+        division();
+         break;
+          case 5:
+        factorial();
+         break;
+          case 6:
+        square();
+         break;
+          case 7:
+        power();
+         break;
+          case 8:
+        cube();
+         break;
+          case 9:
+        squareroot();
+         break;
+        case 0:
+        exit(0);
+        break;
+         
+        default:
+        cout<<"*wrong choice, enter valid choice*\n\n";
+        break;
+    }
+       
+    }
+   
+   
+ 
+   
+   
+   
+   
+    return 0;
+}
+void addition(){
+    cout<<"enter the numbers you want to add:";
+    int a,b;
+    cin>>a>>b;
+    cout<<"the addition of "<<a<<"and"<<b<<"is"<<a+b<<endl;
+}
+
+void subtraction(){
+    cout<<"enter the numbers you want to subtract:";
+    int a,b;
+    cin>>a>>b;
+    cout<<"the subtraction of "<<a<<"and"<<b<<"is"<<a-b<<endl;
+}
+
+
+void multiplication(){
+    cout<<"enter the numbers you want to mutiply:";
+    int a,b;
+    cin>>a>>b;
+    cout<<"the mutiplication of "<<a<<"and"<<b<<"is"<<a*b<<endl;
+}
+
+void division(){
+    cout<<"enter the numbers you want to divide:";
+    int a,b;
+    cin>>a>>b;
+    cout<<"the division of "<<a<<"and"<<b<<"is"<<(float)a/(float)b<<endl;
+}
+
+void factorial(){
+    cout<<"enter the number you want to find factorial of:";
+    int n;
+    cin>>n;
+    int fact=1;
+    for(int i=1;i<=n;i++){
+        fact=fact*i;
+    }
+    cout<<"the factorial of"<<n<<"is"<<fact<<endl;
+}
+
+void square(){
+   
+    cout<<"enter the number the want to get square of:";
+    double b;
+    cin>>b;
+    double power = pow(b,2);
+    cout<<"the square of "<<b<<"is"<<power<<endl;
+   
+}
+
+
+
+void power(){
+    cout<<"enter the base and exponent:";
+    double b,e;
+    cin>>b>>e;
+    double power = pow(b,e);
+    cout<<"the solution for base "<<b<<"and exponent"<<e<<"is"<<power<<endl;
+   
+   
+}
+
+void cube(){
+   
+    cout<<"enter the number the want to get cube of:";
+    double b;
+    cin>>b;
+    double power = pow(b,3);
+    cout<<"the cube of "<<b<<"is"<<power<<endl;
+   
+}
+void squareroot(){
+    cout<<"enter the number you want the squareroot of:";
+    double n;
+    cin>>n;
+    double squareRoot = sqrt(n);
+    cout<<"the squareroot of"<<n<<"is"<<squareRoot<<endl;
+   
+}
